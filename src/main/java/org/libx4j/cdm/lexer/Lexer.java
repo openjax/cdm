@@ -22,8 +22,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.rmi.UnexpectedException;
 
+import org.lib4j.util.StreamSearcher;
 import org.libx4j.cdm.Audit;
-import org.safris.commons.util.StreamSearcher;
 
 public class Lexer {
   private static final StreamSearcher.Char eol = new StreamSearcher.Char(new char[] {'\r'}, new char[] {'\n'});
