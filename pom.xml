@@ -41,8 +41,8 @@
         <configuration>
           <file>src/main/resources/keywords.txt</file>
           <dir>generated-sources/istenum</dir>
-          <className>org.safris.cdm.lexer.Keyword</className>
-          <inheritsFrom>org.safris.cdm.lexer.Lexer.Token</inheritsFrom>
+          <className>org.libx4j.cdm.lexer.Keyword</className>
+          <inheritsFrom>org.libx4j.cdm.lexer.Lexer.Token</inheritsFrom>
         </configuration>
       </plugin>
     </plugins>

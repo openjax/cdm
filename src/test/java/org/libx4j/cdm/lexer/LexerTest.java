@@ -14,14 +14,14 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.safris.cdm.lexer;
+package org.libx4j.cdm.lexer;
 
 import java.io.File;
 import java.io.IOException;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.safris.cdm.Audit;
+import org.libx4j.cdm.Audit;
 import org.safris.commons.io.Files;
 
 public class LexerTest {
