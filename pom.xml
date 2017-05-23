@@ -1,0 +1,68 @@
+<!--
+  Copyright (c) 2014 lib4j
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  
+  You should have received a copy of The MIT License (MIT) along with this
+  program. If not, see <http://opensource.org/licenses/MIT/>.
+-->
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org</groupId>
+    <artifactId>libx4j</artifactId>
+    <version>2.5.1</version>
+  </parent>
+  <groupId>org.libx4j</groupId>
+  <artifactId>libx4j-cdm</artifactId>
+  <version>0.0.6</version>
+  <name>${project.groupId}:${project.artifactId}</name>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.libx4j.maven.plugin</groupId>
+        <artifactId>codegen-maven-plugin</artifactId>
+        <configuration>
+          <file>src/main/resources/keywords.txt</file>
+          <dir>generated-sources/istenum</dir>
+          <className>org.safris.cdm.lexer.Keyword</className>
+          <inheritsFrom>org.safris.cdm.lexer.Lexer.Token</inheritsFrom>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.lib4j</groupId>
+      <artifactId>lib4j-algo</artifactId>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>mvn.repo.lib4j.org</id>
+      <url>http://mvn.repo.lib4j.org/m2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>mvn.repo.lib4j.org</id>
+      <url>http://mvn.repo.lib4j.org/m2</url>
+    </pluginRepository>
+  </pluginRepositories>
+</project>
