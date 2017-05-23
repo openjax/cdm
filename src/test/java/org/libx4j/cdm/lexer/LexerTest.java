@@ -24,10 +24,11 @@ import org.junit.Test;
 import org.lib4j.io.Files;
 import org.libx4j.cdm.Audit;
 
+// FIXME: This is a brittle test. Change it!
 public class LexerTest {
   @Test
   public void testTokenize() throws IOException {
-    final File file = new File("../xsb/runtime/src/main/java/org/safris/xsb/runtime/Binding.java");
+    final File file = new File("../xsb/runtime/src/main/java/org/libx4j/xsb/runtime/Binding.java");
     final Audit audit = Lexer.tokenize(file);
 
     final String expected = new String(Files.getBytes(file));
