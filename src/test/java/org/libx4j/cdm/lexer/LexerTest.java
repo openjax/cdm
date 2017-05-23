@@ -21,8 +21,8 @@ import java.io.IOException;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.lib4j.io.Files;
 import org.libx4j.cdm.Audit;
-import org.safris.commons.io.Files;
 
 public class LexerTest {
   @Test
