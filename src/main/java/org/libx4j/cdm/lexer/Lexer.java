@@ -20,7 +20,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.rmi.UnexpectedException;
 
 import org.lib4j.util.StreamSearcher;
 import org.libx4j.cdm.Audit;
@@ -78,7 +77,7 @@ public class Lexer {
 
       while (i < chars.length) {
         if ((b = in.read()) == -1)
-          throw new UnexpectedException("Unexpected end of stream.");
+          throw new UnsupportedOperationException("Unexpected end of stream.");
 
         ch = chars[i++] = (char)b;
         if ('0' <= ch && ch <= '9' && (token == null || token != Span.WORD)) {
