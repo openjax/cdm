@@ -45,6 +45,10 @@
           <inheritsFrom>org.libx4j.cdm.lexer.Lexer.Token</inheritsFrom>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.libx4j.maven.plugin</groupId>
+        <artifactId>xml-maven-plugin</artifactId>
+      </plugin>
     </plugins>
   </build>
   <dependencies>
