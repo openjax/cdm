@@ -14,16 +14,15 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.libx4j.cdm;
+package org.lib4j.cdm;
 
-import java.io.File;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import org.libx4j.cdm.lexer.Lexer;
-import org.libx4j.cdm.lexer.Lexer.Delimiter;
-import org.libx4j.cdm.lexer.Lexer.Token;
+import org.lib4j.cdm.lexer.Lexer;
+import org.lib4j.cdm.lexer.Lexer.Delimiter;
+import org.lib4j.cdm.lexer.Lexer.Token;
 
 public class Audit {
   public static class Index {
@@ -67,31 +66,29 @@ public class Audit {
     }
   }
 
-  public final File file;
   public final char[] chars;
-  public final List<Index> indices = new LinkedList<Index>();
+  public final List<Index> indices = new ArrayList<Index>();
   private final Scope scope = new Scope();
 
-  public Audit(final File file, final char[] chars) {
-    this.file = file;
+  public Audit(final char[] chars) {
     this.chars = chars;
   }
 
   public void push(final Lexer.Token token, final int start, final int length) {
-    final Index index = new Index(token, start - 1, length);
+    final Index index = new Index(token, start, length);
     indices.add(index);
     scope.push(index);
   }
 
   @Override
   public String toString() {
-    final StringBuffer buffer = new StringBuffer();
+    final StringBuilder builder = new StringBuilder();
     for (final Index index : indices)
       if (index.token instanceof Delimiter)
-        buffer.append(((Delimiter)index.token).ch);
+        builder.append(((Delimiter)index.token).ch);
       else
-        buffer.append(chars, index.start, index.length);
+        builder.append(chars, index.start, index.length);
 
-    return buffer.toString();
+    return builder.toString();
   }
 }
