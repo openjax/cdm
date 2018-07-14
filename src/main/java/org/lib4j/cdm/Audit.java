@@ -39,9 +39,9 @@ public class Audit {
   }
 
   public static class Scope {
-    private final Stack<Index> openParen = new Stack<Index>();
-    private final Stack<Index> openBracket = new Stack<Index>();
-    private final Stack<Index> openBrace = new Stack<Index>();
+    private final Stack<Index> openParen = new Stack<>();
+    private final Stack<Index> openBracket = new Stack<>();
+    private final Stack<Index> openBrace = new Stack<>();
 
     public Index push(final Index item) {
       if (item.token == Delimiter.PAREN_OPEN)
@@ -67,7 +67,7 @@ public class Audit {
   }
 
   public final char[] chars;
-  public final List<Index> indices = new ArrayList<Index>();
+  public final List<Index> indices = new ArrayList<>();
   private final Scope scope = new Scope();
 
   public Audit(final char[] chars) {
