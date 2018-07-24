@@ -19,11 +19,11 @@ package org.lib4j.cdm.lexer;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
+import java.nio.file.Files;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.lib4j.cdm.Audit;
-import org.lib4j.io.Files;
 
 public class LexerTest {
   @Test
@@ -58,7 +58,7 @@ public class LexerTest {
     final File file = new File("../../libx4j/xsb/runtime/src/main/java/org/libx4j/xsb/runtime/Binding.java");
     final Audit audit = Lexer.tokenize(file, null);
 
-    final String expected = new String(Files.getBytes(file));
+    final String expected = new String(Files.readAllBytes(file.toPath()));
     final String out = audit.toString();
     Assert.assertEquals(expected, out);
     /*for (int x = 0; x < indices.size(); x++) {
