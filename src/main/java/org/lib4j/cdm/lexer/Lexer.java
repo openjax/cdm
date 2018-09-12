@@ -23,7 +23,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 
 import org.lib4j.cdm.Audit;
-import org.lib4j.util.StreamSearcher;
+import org.fastjax.util.StreamSearcher;
 
 public class Lexer {
   private static final StreamSearcher.Char eol = new StreamSearcher.Char(new char[] {'\r'}, new char[] {'\n'});
