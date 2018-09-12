@@ -1,4 +1,4 @@
-/* Copyright (c) 2014 lib4j
+/* Copyright (c) 2014 FastJAX
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.lib4j.cdm.lexer;
+package org.fastjax.cdm.lexer;
 
 import java.io.File;
 import java.io.FileReader;
@@ -22,8 +22,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-import org.lib4j.cdm.Audit;
+import org.fastjax.cdm.Audit;
 import org.fastjax.util.StreamSearcher;
+import org.lib4j.cdm.lexer.Keyword;
 
 public class Lexer {
   private static final StreamSearcher.Char eol = new StreamSearcher.Char(new char[] {'\r'}, new char[] {'\n'});
