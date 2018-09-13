@@ -24,7 +24,7 @@ import java.io.Reader;
 
 import org.fastjax.cdm.Audit;
 import org.fastjax.util.StreamSearcher;
-import org.lib4j.cdm.lexer.Keyword;
+import org.fastjax.cdm.lexer.Keyword;
 
 public class Lexer {
   private static final StreamSearcher.Char eol = new StreamSearcher.Char(new char[] {'\r'}, new char[] {'\n'});

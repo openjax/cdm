@@ -22,10 +22,8 @@ import java.io.StringReader;
 import java.nio.file.Files;
 
 import org.fastjax.cdm.Audit;
-import org.fastjax.cdm.lexer.Lexer;
 import org.junit.Assert;
 import org.junit.Test;
-import org.lib4j.cdm.lexer.Keyword;
 
 public class LexerTest {
   @Test
