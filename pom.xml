@@ -36,8 +36,9 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.easyjax.maven.plugin</groupId>
+        <groupId>org.fastjax.maven.plugin</groupId>
         <artifactId>codegen-maven-plugin</artifactId>
+        <version>1.0.3-SNAPSHOT</version>
         <executions>
           <execution>
             <goals>
