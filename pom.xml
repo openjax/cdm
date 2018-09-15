@@ -22,15 +22,13 @@
   <parent>
     <groupId>org</groupId>
     <artifactId>fastjax</artifactId>
-    <version>3.2.3-SNAPSHOT</version>
+    <version>0.11.15-SNAPSHOT</version>
   </parent>
   <groupId>org.fastjax</groupId>
   <artifactId>fastjax-cdm</artifactId>
   <version>0.0.7-SNAPSHOT</version>
   <name>${project.groupId}:${project.artifactId}</name>
   <properties>
-    <maven.compiler.source>9</maven.compiler.source>
-    <maven.compiler.target>9</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
@@ -38,7 +36,7 @@
       <plugin>
         <groupId>org.fastjax.maven.plugin</groupId>
         <artifactId>codegen-maven-plugin</artifactId>
-        <version>1.0.3-SNAPSHOT</version>
+        <version>0.3.3-SNAPSHOT</version>
         <executions>
           <execution>
             <goals>
@@ -60,7 +58,7 @@
     <dependency>
       <groupId>org.fastjax</groupId>
       <artifactId>fastjax-util</artifactId>
-      <version>1.5.9-SNAPSHOT</version>
+      <version>0.7.9-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>
