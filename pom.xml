@@ -24,7 +24,6 @@
     <artifactId>fastjax</artifactId>
     <version>1.11.15-SNAPSHOT</version>
   </parent>
-  <groupId>org.fastjax</groupId>
   <artifactId>cdm</artifactId>
   <version>0.0.7-SNAPSHOT</version>
   <name>${project.groupId}:${project.artifactId}</name>
