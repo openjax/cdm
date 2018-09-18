@@ -20,12 +20,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org</groupId>
+    <groupId>org.fastjax</groupId>
     <artifactId>fastjax</artifactId>
-    <version>0.11.15-SNAPSHOT</version>
+    <version>1.11.15-SNAPSHOT</version>
   </parent>
   <groupId>org.fastjax</groupId>
-  <artifactId>fastjax-cdm</artifactId>
+  <artifactId>cdm</artifactId>
   <version>0.0.7-SNAPSHOT</version>
   <name>${project.groupId}:${project.artifactId}</name>
   <properties>
@@ -34,20 +34,20 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.fastjax.maven.plugin</groupId>
-        <artifactId>codegen-maven-plugin</artifactId>
-        <version>0.3.3-SNAPSHOT</version>
+        <groupId>org.fastjax.autogen</groupId>
+        <artifactId>autogen-maven-plugin</artifactId>
+        <version>0.2.3-SNAPSHOT</version>
         <executions>
           <execution>
             <goals>
-              <goal>istenum</goal>
+              <goal>radixtree</goal>
             </goals>
             <phase>generate-sources</phase>
           </execution>
         </executions>
         <configuration>
           <file>src/main/resources/keywords.txt</file>
-          <dir>generated-sources/istenum</dir>
+          <dir>generated-sources/autogen</dir>
           <className>org.fastjax.cdm.lexer.Keyword</className>
           <inheritsFrom>org.fastjax.cdm.lexer.Lexer.Token</inheritsFrom>
         </configuration>
@@ -57,8 +57,13 @@
   <dependencies>
     <dependency>
       <groupId>org.fastjax</groupId>
-      <artifactId>fastjax-util</artifactId>
+      <artifactId>util</artifactId>
       <version>0.7.9-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.fastjax.autogen</groupId>
+      <artifactId>autogen-radixtree</artifactId>
+      <version>0.2.3-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>
