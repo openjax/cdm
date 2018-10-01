@@ -45,8 +45,8 @@
           </execution>
         </executions>
         <configuration>
-          <file>src/main/resources/keywords.txt</file>
-          <dir>generated-sources/autogen</dir>
+          <inFile>src/main/resources/keywords.txt</inFile>
+          <outDir>generated-sources/autogen</outDir>
           <className>org.fastjax.cdm.lexer.Keyword</className>
           <inheritsFrom>org.fastjax.cdm.lexer.Lexer.Token</inheritsFrom>
         </configuration>
