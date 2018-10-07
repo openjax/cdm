@@ -24,7 +24,6 @@ import java.io.Reader;
 
 import org.fastjax.cdm.Audit;
 import org.fastjax.util.StreamSearcher;
-import org.fastjax.cdm.lexer.Keyword;
 
 public class Lexer {
   private static final StreamSearcher.Char eol = new StreamSearcher.Char(new char[] {'\r'}, new char[] {'\n'});
@@ -62,7 +61,10 @@ public class Lexer {
   public static enum Span implements Token {
     WHITESPACE("\t", "\n", "\r", " "), LINE_COMMENT("//"), BLOCK_COMMENT("/*"), NUMBER, CHARACTER, STRING, WORD;
 
+    public final String[] ch;
+
     Span(final String ... ch) {
+      this.ch = ch;
     }
   }
 
