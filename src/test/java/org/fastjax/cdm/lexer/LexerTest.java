@@ -16,13 +16,14 @@
 
 package org.fastjax.cdm.lexer;
 
+import static org.junit.Assert.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.file.Files;
 
 import org.fastjax.cdm.Audit;
-import org.junit.Assert;
 import org.junit.Test;
 
 public class LexerTest {
@@ -41,7 +42,7 @@ public class LexerTest {
           if (this.start == -1 && token == Lexer.Span.WORD)
             this.start = start;
           else if (token == Lexer.Delimiter.SEMI_COLON) {
-            Assert.assertEquals(getClass().getPackageName(), source.substring(this.start, start));
+            assertEquals(getClass().getPackageName(), source.substring(this.start, start));
             return false;
           }
         }
@@ -50,7 +51,7 @@ public class LexerTest {
       }
     });
 
-    Assert.assertEquals("/* Test class */\r// With a comment\npackage " + getClass().getPackageName() + ";", audit.toString());
+    assertEquals("/* Test class */\r// With a comment\npackage " + getClass().getPackageName() + ";", audit.toString());
   }
 
   @Test
@@ -61,8 +62,8 @@ public class LexerTest {
 
     final String expected = new String(Files.readAllBytes(file.toPath()));
     final String out = audit.toString();
-    Assert.assertEquals(expected, out);
-    /*for (int x = 0; x < indices.size(); x++) {
+    assertEquals(expected, out);
+    /*for (int x = 0; x < indices.size(); ++x) {
       final Index index = indices.get(x);
       logger.info(Strings.padFixed(index.token + ":", 16) + new String(bytes, index.start, index.length + 1));
     }*/
