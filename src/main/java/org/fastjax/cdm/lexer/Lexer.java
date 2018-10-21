@@ -89,7 +89,7 @@ public class Lexer {
 
     while (i < chars.length) {
       if ((b = in.read()) == -1)
-        throw new RuntimeException("Unexpected end of stream.");
+        throw new IOException("Unexpected end of stream");
 
       ch = chars[i++] = (char)b;
       if ('0' <= ch && ch <= '9' && (token == null || token != Span.WORD)) {
