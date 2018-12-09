@@ -32,15 +32,15 @@ public class Lexer {
   private static final StreamSearcher.Char doubleQuote = new StreamSearcher.Char(new char[] {'"'});
 
   public interface Token {
-    public interface Listener {
-      public boolean onToken(final Token token, final int start, final int end);
+    interface Listener {
+      boolean onToken(Token token, int start, int end);
     }
 
-    public String name();
-    public int ordinal();
+    String name();
+    int ordinal();
   }
 
-  public static enum Delimiter implements Token {
+  public enum Delimiter implements Token {
     // NOTE: The declaration list of Delimiter(s) must be in sorted alphabetical order!
     EXCLAMATION("!"), PERCENT("%"), AMPERSAND("&"), AND("&&"), PAREN_OPEN("("), PAREN_CLOSE(")"), ASTERISK("*"), PLUS("+"), PLUS_PLUS("++"), PLUS_EQ("+="), COMMA(","), MINUS("-"), MINUS_MINUS("--"), MINUS_EQ("-="), DOT("."), SLASH("/"), COLON(":"), SEMI_COLON(";"), LT("<"), LTLT("<<"), LTLTLT("<<<"), LTE("<="), EQ("="), EQEQ("=="), GT(">"), GTE(">="), GTGT(">>"), GTGTGT(">>>"), QUESTION("?"), AT("@"), BRACKET_OPEN("["), ARRAY("[]"), BRACKET_CLOSE("]"), CARAT("^"), BRACE_OPEN("{"), PIPE("|"), OR("||"), BRACE_CLOSE("}"), TILDE("~");
 
@@ -58,7 +58,7 @@ public class Lexer {
     }
   }
 
-  public static enum Span implements Token {
+  public enum Span implements Token {
     WHITESPACE("\t", "\n", "\r", " "), LINE_COMMENT("//"), BLOCK_COMMENT("/*"), NUMBER, CHARACTER, STRING, WORD;
 
     public final String[] ch;
@@ -92,7 +92,7 @@ public class Lexer {
         throw new IOException("Unexpected end of stream");
 
       ch = chars[i++] = (char)b;
-      if ('0' <= ch && ch <= '9' && (token == null || token != Span.WORD)) {
+      if ('0' <= ch && ch <= '9' && token != Span.WORD) {
         if (token != Span.NUMBER) {
           audit.push(token, i - len - 1, len);
           if (listener != null && !listener.onToken(token, i - len - 1, len))
@@ -114,7 +114,7 @@ public class Lexer {
           ++len;
         }
         else {
-          if (token == null || token == Span.WHITESPACE || !(token instanceof Keyword)) {
+          if (token == Span.WHITESPACE || !(token instanceof Keyword)) {
             audit.push(token, i - len - 1, len);
             if (listener != null && !listener.onToken(token, i - len - 1, len))
               return audit;
