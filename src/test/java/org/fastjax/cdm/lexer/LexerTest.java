@@ -35,6 +35,10 @@ public class LexerTest {
       private int start = -1;
 
       @Override
+      public void onStartDocument() {
+      }
+
+      @Override
       public boolean onToken(final Lexer.Token token, final int start, final int end) {
         if (token == Keyword.PACKAGE)
           packageFound = true;
@@ -48,6 +52,10 @@ public class LexerTest {
         }
 
         return true;
+      }
+
+      @Override
+      public void onEndDocument() {
       }
     });
 

@@ -33,7 +33,9 @@ public class Lexer {
 
   public interface Token {
     interface Listener {
+      void onStartDocument();
       boolean onToken(Token token, int start, int end);
+      void onEndDocument();
     }
 
     String name();
@@ -86,6 +88,9 @@ public class Lexer {
     char ch;
     Token token = null;
     int len = 0;
+
+    if (listener != null)
+      listener.onStartDocument();
 
     while (i < chars.length) {
       if ((b = in.read()) == -1)
@@ -495,6 +500,9 @@ public class Lexer {
 
     // add the last token, because its final delimiter can be the EOF
     audit.push(token, i - len, len);
+
+    if (listener != null)
+      listener.onEndDocument();
 
     return audit;
   }
