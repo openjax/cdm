@@ -63,9 +63,8 @@ public class LexerTest {
   }
 
   @Test
-  // FIXME: This is a bad test!
   public void testTokenize() throws IOException {
-    final File file = new File("../../openjax/xsb/runtime/src/main/java/org/openjax/xsb/runtime/Binding.java");
+    final File file = new File("src/main/java/" + Lexer.class.getName().replace('.', '/').concat(".java"));
     final Audit audit = Lexer.tokenize(file, null);
 
     final String expected = new String(Files.readAllBytes(file.toPath()));

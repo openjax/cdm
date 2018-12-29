@@ -153,7 +153,7 @@ public class Lexer {
         }
       }
       else if (ch == '.') {
-        if (token == null || token == Span.WHITESPACE || token == Delimiter.BRACKET_OPEN || token == Delimiter.BRACE_OPEN) {
+        if (token == null || token == Delimiter.BRACKET_OPEN || token == Delimiter.BRACE_OPEN) {
           len = 1;
           token = Span.NUMBER;
         }
