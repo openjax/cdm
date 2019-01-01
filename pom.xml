@@ -1,5 +1,5 @@
 <!--
-  Copyright (c) 2014 FastJAX
+  Copyright (c) 2014 OpenJAX
   
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
@@ -20,18 +20,17 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.fastjax</groupId>
-    <artifactId>fastjax</artifactId>
+    <groupId>org.openjax.classic</groupId>
+    <artifactId>classic</artifactId>
     <version>1.11.15-SNAPSHOT</version>
   </parent>
-  <artifactId>cdm</artifactId>
+  <artifactId>classic-cdm</artifactId>
   <version>0.0.7-SNAPSHOT</version>
   <name>${project.groupId}:${project.artifactId}</name>
-  <url>https://cdm.fastjax.org/</url>
   <build>
     <plugins>
       <plugin>
-        <groupId>org.fastjax.autogen</groupId>
+        <groupId>org.openjax.classic.autogen</groupId>
         <artifactId>autogen-maven-plugin</artifactId>
         <version>0.2.3-SNAPSHOT</version>
         <executions>
@@ -45,20 +44,20 @@
         <configuration>
           <inFile>src/main/resources/keywords.txt</inFile>
           <destDir>${project.build.directory}/generated-sources/autogen</destDir>
-          <className>org.fastjax.cdm.lexer.Keyword</className>
-          <inheritsFrom>org.fastjax.cdm.lexer.Lexer.Token</inheritsFrom>
+          <className>org.openjax.classic.cdm.lexer.Keyword</className>
+          <inheritsFrom>org.openjax.classic.cdm.lexer.Lexer.Token</inheritsFrom>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.fastjax</groupId>
-      <artifactId>util</artifactId>
+      <groupId>org.openjax.classic</groupId>
+      <artifactId>classic-util</artifactId>
       <version>0.7.9-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>org.fastjax.autogen</groupId>
+      <groupId>org.openjax.classic.autogen</groupId>
       <artifactId>autogen-radixtree</artifactId>
       <version>0.2.3-SNAPSHOT</version>
     </dependency>

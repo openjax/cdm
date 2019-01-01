@@ -1,4 +1,4 @@
-# FastJAX CDM
+# OpenJAX Classic CDM
 
 **Code Domain Model**
 
@@ -6,7 +6,7 @@ CDM is an early development project to develop a Java API for the expression of 
 
 ### JavaDocs
 
-JavaDocs are available [here](https://cdm.fastjax.org/javadocs/).
+JavaDocs are available [here](https://classic.openjax.org/cdm/apidocs/).
 
 ## Contributing
 

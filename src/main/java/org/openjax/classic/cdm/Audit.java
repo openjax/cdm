@@ -1,4 +1,4 @@
-/* Copyright (c) 2015 FastJAX
+/* Copyright (c) 2015 OpenJAX
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -14,15 +14,15 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.fastjax.cdm;
+package org.openjax.classic.cdm;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import org.fastjax.cdm.lexer.Lexer;
-import org.fastjax.cdm.lexer.Lexer.Delimiter;
-import org.fastjax.cdm.lexer.Lexer.Token;
+import org.openjax.classic.cdm.lexer.Lexer;
+import org.openjax.classic.cdm.lexer.Lexer.Delimiter;
+import org.openjax.classic.cdm.lexer.Lexer.Token;
 
 public class Audit {
   public static class Index {

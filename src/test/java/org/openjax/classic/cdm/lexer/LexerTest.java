@@ -1,4 +1,4 @@
-/* Copyright (c) 2014 FastJAX
+/* Copyright (c) 2014 OpenJAX
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.fastjax.cdm.lexer;
+package org.openjax.classic.cdm.lexer;
 
 import static org.junit.Assert.*;
 
@@ -23,8 +23,8 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.nio.file.Files;
 
-import org.fastjax.cdm.Audit;
 import org.junit.Test;
+import org.openjax.classic.cdm.Audit;
 
 public class LexerTest {
   @Test
