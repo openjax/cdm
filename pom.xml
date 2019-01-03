@@ -20,17 +20,17 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.openjax.classic</groupId>
-    <artifactId>classic</artifactId>
+    <groupId>org.openjax.standard</groupId>
+    <artifactId>standard</artifactId>
     <version>1.11.15-SNAPSHOT</version>
   </parent>
-  <artifactId>classic-cdm</artifactId>
+  <artifactId>standard-cdm</artifactId>
   <version>0.0.7-SNAPSHOT</version>
   <name>${project.groupId}:${project.artifactId}</name>
   <build>
     <plugins>
       <plugin>
-        <groupId>org.openjax.classic.autogen</groupId>
+        <groupId>org.openjax.standard.autogen</groupId>
         <artifactId>autogen-maven-plugin</artifactId>
         <version>0.2.3-SNAPSHOT</version>
         <executions>
@@ -44,20 +44,20 @@
         <configuration>
           <inFile>src/main/resources/keywords.txt</inFile>
           <destDir>${project.build.directory}/generated-sources/autogen</destDir>
-          <className>org.openjax.classic.cdm.lexer.Keyword</className>
-          <inheritsFrom>org.openjax.classic.cdm.lexer.Lexer.Token</inheritsFrom>
+          <className>org.openjax.standard.cdm.lexer.Keyword</className>
+          <inheritsFrom>org.openjax.standard.cdm.lexer.Lexer.Token</inheritsFrom>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.openjax.classic</groupId>
-      <artifactId>classic-util</artifactId>
+      <groupId>org.openjax.standard</groupId>
+      <artifactId>standard-util</artifactId>
       <version>0.7.9-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>org.openjax.classic.autogen</groupId>
+      <groupId>org.openjax.standard.autogen</groupId>
       <artifactId>autogen-radixtree</artifactId>
       <version>0.2.3-SNAPSHOT</version>
     </dependency>
