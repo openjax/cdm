@@ -1,6 +1,8 @@
 # OpenJAX Standard CDM
 
-**Code Domain Model**
+> Code Domain Model
+
+[![Build Status](https://travis-ci.org/openjax/standard-cdm.png)](https://travis-ci.org/openjax/standard-cdm)
 
 CDM is an early development project to develop a Java API for the expression of the Java language.
 
