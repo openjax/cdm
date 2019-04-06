@@ -22,9 +22,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-import org.openjax.standard.cdm.lexer.Keyword;
-import org.openjax.standard.util.StreamSearcher;
 import org.openjax.standard.cdm.Audit;
+import org.openjax.standard.util.StreamSearcher;
 
 public class Lexer {
   private static final StreamSearcher.Char eol = new StreamSearcher.Char(new char[] {'\r'}, new char[] {'\n'});
