@@ -14,15 +14,15 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.openjax.standard.cdm;
+package org.openjax.ext.cdm;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import org.openjax.standard.cdm.lexer.Lexer;
-import org.openjax.standard.cdm.lexer.Lexer.Delimiter;
-import org.openjax.standard.cdm.lexer.Lexer.Token;
+import org.openjax.ext.cdm.lexer.Lexer;
+import org.openjax.ext.cdm.lexer.Lexer.Delimiter;
+import org.openjax.ext.cdm.lexer.Lexer.Token;
 
 public class Audit {
   public static class Index {

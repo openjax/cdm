@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.openjax.standard.cdm.lexer;
+package org.openjax.ext.cdm.lexer;
 
 import static org.junit.Assert.*;
 
@@ -24,7 +24,8 @@ import java.io.StringReader;
 import java.nio.file.Files;
 
 import org.junit.Test;
-import org.openjax.standard.cdm.Audit;
+import org.openjax.ext.cdm.Audit;
+import org.openjax.ext.cdm.lexer.Keyword;
 
 public class LexerTest {
   @Test
