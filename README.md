@@ -4,12 +4,10 @@
 
 [![Build Status](https://travis-ci.org/openjax/standard-cdm.png)](https://travis-ci.org/openjax/standard-cdm)
 [![Coverage Status](https://coveralls.io/repos/github/openjax/standard-cdm/badge.svg)](https://coveralls.io/github/openjax/standard-cdm)
+[![Javadocs](https://www.javadoc.io/badge/org.openjax.standard/cdm.svg)](https://www.javadoc.io/doc/org.openjax.standard/cdm)
+[![Released Version](https://img.shields.io/maven-central/v/org.openjax.standard/cdm.svg)](https://mvnrepository.com/artifact/org.openjax.standard/cdm)
 
 CDM is an early development project to develop a Java API for the expression of the Java language.
-
-### JavaDocs
-
-JavaDocs are available [here](https://standard.openjax.org/cdm/apidocs/).
 
 ## Contributing
 
