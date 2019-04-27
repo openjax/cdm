@@ -30,8 +30,8 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.openjax.standard.autogen</groupId>
-        <artifactId>autogen-maven-plugin</artifactId>
+        <groupId>org.openjax.standard.codegen</groupId>
+        <artifactId>codegen-maven-plugin</artifactId>
         <version>0.2.3-SNAPSHOT</version>
         <executions>
           <execution>
@@ -43,7 +43,7 @@
         </executions>
         <configuration>
           <inFile>src/main/resources/keywords.txt</inFile>
-          <destDir>${project.build.directory}/generated-sources/autogen</destDir>
+          <destDir>${project.build.directory}/generated-sources/codegen</destDir>
           <className>org.openjax.standard.cdm.lexer.Keyword</className>
           <inheritsFrom>org.openjax.standard.cdm.lexer.Lexer.Token</inheritsFrom>
         </configuration>
@@ -57,7 +57,7 @@
       <version>0.7.9-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>org.openjax.standard.autogen</groupId>
+      <groupId>org.openjax.standard.codegen</groupId>
       <artifactId>radixtree</artifactId>
       <version>0.2.3-SNAPSHOT</version>
     </dependency>
