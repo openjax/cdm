@@ -26,7 +26,10 @@
   </parent>
   <artifactId>cdm</artifactId>
   <version>0.0.7-SNAPSHOT</version>
-  <name>${project.groupId}:${project.artifactId}</name>
+  <name>OpenJAX Extensions CDM</name>
+  <description>
+    CDM is an early development project to develop a Java API for the expression of the Java language.
+  </description>
   <build>
     <plugins>
       <plugin>
