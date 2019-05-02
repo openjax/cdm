@@ -14,7 +14,7 @@
  * program. If not, see <http://opensource.org/licenses/MIT/>.
  */
 
-package org.openjax.ext.cdm.lexer;
+package org.openjax.cdm.lexer;
 
 import java.io.File;
 import java.io.FileReader;
@@ -22,9 +22,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-import org.openjax.ext.cdm.Audit;
-import org.openjax.ext.cdm.lexer.Keyword;
-import org.openjax.ext.util.StreamSearcher;
+import org.openjax.cdm.Audit;
+import org.openjax.cdm.lexer.Keyword;
+import org.openjax.util.StreamSearcher;
 
 public class Lexer {
   private static final StreamSearcher.Char eol = new StreamSearcher.Char(new char[] {'\r'}, new char[] {'\n'});

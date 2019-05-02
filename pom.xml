@@ -20,20 +20,20 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.openjax.ext</groupId>
-    <artifactId>ext</artifactId>
-    <version>1.11.15-SNAPSHOT</version>
+    <groupId>org.openjax</groupId>
+    <artifactId>openjax</artifactId>
+    <version>2.5.3-SNAPSHOT</version>
   </parent>
   <artifactId>cdm</artifactId>
   <version>0.0.7-SNAPSHOT</version>
-  <name>OpenJAX Extensions CDM</name>
+  <name>OpenJAX CDM</name>
   <description>
     CDM is an early development project to develop a Java API for the expression of the Java language.
   </description>
   <build>
     <plugins>
       <plugin>
-        <groupId>org.openjax.ext.codegen</groupId>
+        <groupId>org.openjax.codegen</groupId>
         <artifactId>codegen-maven-plugin</artifactId>
         <version>0.2.3-SNAPSHOT</version>
         <executions>
@@ -47,20 +47,20 @@
         <configuration>
           <inFile>src/main/resources/keywords.txt</inFile>
           <destDir>${project.build.directory}/generated-sources/codegen</destDir>
-          <className>org.openjax.ext.cdm.lexer.Keyword</className>
-          <inheritsFrom>org.openjax.ext.cdm.lexer.Lexer.Token</inheritsFrom>
+          <className>org.openjax.cdm.lexer.Keyword</className>
+          <inheritsFrom>org.openjax.cdm.lexer.Lexer.Token</inheritsFrom>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <dependencies>
     <dependency>
-      <groupId>org.openjax.ext</groupId>
+      <groupId>org.openjax</groupId>
       <artifactId>util</artifactId>
       <version>0.7.9-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>org.openjax.ext.codegen</groupId>
+      <groupId>org.openjax.codegen</groupId>
       <artifactId>radixtree</artifactId>
       <version>0.2.3-SNAPSHOT</version>
     </dependency>
