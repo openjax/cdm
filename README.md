@@ -7,6 +7,8 @@
 [![Javadocs](https://www.javadoc.io/badge/org.openjax/cdm.svg)](https://www.javadoc.io/doc/org.openjax/cdm)
 [![Released Version](https://img.shields.io/maven-central/v/org.openjax/cdm.svg)](https://mvnrepository.com/artifact/org.openjax/cdm)
 
+## Introduction
+
 CDM is an early development project to develop a Java API for the expression of the Java language.
 
 ## Contributing
