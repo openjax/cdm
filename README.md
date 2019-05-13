@@ -1,7 +1,5 @@
 # OpenJAX CDM
 
-> Code Domain Model
-
 [![Build Status](https://travis-ci.org/openjax/cdm.png)](https://travis-ci.org/openjax/cdm)
 [![Coverage Status](https://coveralls.io/repos/github/openjax/cdm/badge.svg)](https://coveralls.io/github/openjax/cdm)
 [![Javadocs](https://www.javadoc.io/badge/org.openjax/cdm.svg)](https://www.javadoc.io/doc/org.openjax/cdm)
@@ -9,7 +7,7 @@
 
 ## Introduction
 
-CDM is an early development project to develop a Java API for the expression of the Java language.
+CDM (Code Domain Model) is an early development project to develop a Java API for the expression of the Java language.
 
 ## Contributing
 
