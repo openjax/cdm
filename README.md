@@ -1,4 +1,4 @@
-# OpenJAX CDM
+# CDM
 
 [![Build Status](https://travis-ci.org/openjax/cdm.png)](https://travis-ci.org/openjax/cdm)
 [![Coverage Status](https://coveralls.io/repos/github/openjax/cdm/badge.svg)](https://coveralls.io/github/openjax/cdm)
