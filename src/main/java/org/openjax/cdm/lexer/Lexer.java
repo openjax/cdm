@@ -22,15 +22,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-import org.openjax.cdm.Audit;
-import org.openjax.cdm.lexer.Keyword;
 import org.libj.util.StreamSearcher;
+import org.openjax.cdm.Audit;
 
-public class Lexer {
+public final class Lexer {
   private static final StreamSearcher.Char eol = new StreamSearcher.Char(new char[] {'\r'}, new char[] {'\n'});
   private static final StreamSearcher.Char closeComment = new StreamSearcher.Char(new char[] {'*', '/'});
   private static final StreamSearcher.Char singleQuote = new StreamSearcher.Char(new char[] {'\''});
   private static final StreamSearcher.Char doubleQuote = new StreamSearcher.Char(new char[] {'"'});
+
+  private Lexer() {
+  }
 
   public interface Token {
     interface Listener {

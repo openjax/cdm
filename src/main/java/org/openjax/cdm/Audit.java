@@ -25,7 +25,7 @@ import org.openjax.cdm.lexer.Lexer.Delimiter;
 import org.openjax.cdm.lexer.Lexer.Token;
 
 public class Audit {
-  public static class Index {
+  public static final class Index {
     public final Token token;
     public Index close;
     public final int start;
