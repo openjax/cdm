@@ -87,7 +87,6 @@ public final class Lexer {
     final char[] chars = new char[length];
     final Audit audit = new Audit(chars);
     int i = 0;
-    int b = -1;
     char ch;
     Token token = null;
     int len = 0;
@@ -95,7 +94,7 @@ public final class Lexer {
     if (listener != null)
       listener.onStartDocument();
 
-    while (i < chars.length) {
+    for (int b; i < chars.length;) {
       if ((b = in.read()) == -1)
         throw new IOException("Unexpected end of stream");
 
