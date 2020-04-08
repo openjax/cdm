@@ -25,7 +25,6 @@ import java.nio.file.Files;
 
 import org.junit.Test;
 import org.openjax.cdm.Audit;
-import org.openjax.cdm.lexer.Keyword;
 
 public class LexerTest {
   @Test
