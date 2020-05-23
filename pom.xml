@@ -22,10 +22,10 @@
   <parent>
     <groupId>org.openjax</groupId>
     <artifactId>openjax</artifactId>
-    <version>2.5.5-SNAPSHOT</version>
+    <version>2.5.5</version>
   </parent>
   <artifactId>cdm</artifactId>
-  <version>0.0.9-SNAPSHOT</version>
+  <version>0.0.9</version>
   <name>OpenJAX CDM</name>
   <description>
     CDM is an early development project to develop a Java API for the expression of the Java language.
@@ -35,7 +35,7 @@
       <plugin>
         <groupId>org.openjax.codegen</groupId>
         <artifactId>codegen-maven-plugin</artifactId>
-        <version>0.2.5-SNAPSHOT</version>
+        <version>0.2.5</version>
         <executions>
           <execution>
             <goals>
@@ -57,12 +57,12 @@
     <dependency>
       <groupId>org.libj</groupId>
       <artifactId>util</artifactId>
-      <version>0.8.1-SNAPSHOT</version>
+      <version>0.8.1</version>
     </dependency>
     <dependency>
       <groupId>org.openjax.codegen</groupId>
       <artifactId>radixtree</artifactId>
-      <version>0.2.5-SNAPSHOT</version>
+      <version>0.2.5</version>
     </dependency>
   </dependencies>
 </project>
