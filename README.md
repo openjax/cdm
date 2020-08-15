@@ -1,9 +1,9 @@
 # CDM
 
-[![Build Status](https://travis-ci.org/openjax/cdm.svg?1)](https://travis-ci.org/openjax/cdm)
-[![Coverage Status](https://coveralls.io/repos/github/openjax/cdm/badge.svg?1)](https://coveralls.io/github/openjax/cdm)
-[![Javadocs](https://www.javadoc.io/badge/org.openjax/cdm.svg?1)](https://www.javadoc.io/doc/org.openjax/cdm)
-[![Released Version](https://img.shields.io/maven-central/v/org.openjax/cdm.svg?1)](https://mvnrepository.com/artifact/org.openjax/cdm)
+[![Build Status](https://travis-ci.org/openjax/cdm.svg?branch=master)](https://travis-ci.org/openjax/cdm)
+[![Coverage Status](https://coveralls.io/repos/github/openjax/cdm/badge.svg)](https://coveralls.io/github/openjax/cdm)
+[![Javadocs](https://www.javadoc.io/badge/org.openjax/cdm.svg)](https://www.javadoc.io/doc/org.openjax/cdm)
+[![Released Version](https://img.shields.io/maven-central/v/org.openjax/cdm.svg)](https://mvnrepository.com/artifact/org.openjax/cdm)
 ![Snapshot Version](https://img.shields.io/nexus/s/org.openjax/cdm?label=maven-snapshot&server=https%3A%2F%2Foss.sonatype.org)
 
 ## Introduction
