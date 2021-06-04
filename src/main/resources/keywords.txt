@@ -32,11 +32,14 @@ long
 native
 new
 null
+permits
 package
 private
 protected
 public
+record
 return
+sealed
 short
 static
 strictfp
@@ -49,6 +52,8 @@ throws
 transient
 true
 try
+var
 void
 volatile
 while
+yield
