@@ -1,6 +1,6 @@
 # CDM
 
-[![Build Status](https://travis-ic.org/openjax/cdm.svg?branch=master)](https://travis-ic.org/openjax/cdm)
+[![Build Status](https://github.com/openjax/cdm/workflows/build.yml/badge.svg)](https://github.com/openjax/cdm/actions/workflows/build.yml)
 [![Coverage Status](https://coveralls.io/repos/github/openjax/cdm/badge.svg)](https://coveralls.io/github/openjax/cdm)
 [![Javadocs](https://www.javadoc.io/badge/org.openjax/cdm.svg)](https://www.javadoc.io/doc/org.openjax/cdm)
 [![Released Version](https://img.shields.io/maven-central/v/org.openjax/cdm.svg)](https://mvnrepository.com/artifact/org.openjax/cdm)
