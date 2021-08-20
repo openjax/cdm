@@ -33,6 +33,10 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.openjax.xml</groupId>
+        <artifactId>xml-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
         <groupId>org.openjax.codegen</groupId>
         <artifactId>codegen-maven-plugin</artifactId>
         <version>0.2.6-SNAPSHOT</version>
