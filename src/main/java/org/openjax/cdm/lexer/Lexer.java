@@ -94,7 +94,7 @@ public final class Lexer {
     if (listener != null)
       listener.onStartDocument();
 
-    for (int b; i < chars.length;) {
+    for (int b; i < chars.length;) { // [A]
       if ((b = in.read()) == -1)
         throw new IOException("Unexpected end of stream");
 

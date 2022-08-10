@@ -70,7 +70,7 @@ public class LexerTest {
     final String expected = new String(Files.readAllBytes(file.toPath()));
     final String out = audit.toString();
     assertEquals(expected, out);
-    /*for (int x = 0, len = indices.size(); x < len; ++x) {
+    /*for (int x = 0, len = indices.size(); x < len; ++x) { // [?]
       final Index index = indices.get(x);
       logger.info(Strings.padFixed(index.token + ":", 16) + new String(bytes, index.start, index.length + 1));
     }*/

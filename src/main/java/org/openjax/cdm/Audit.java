@@ -17,7 +17,6 @@
 package org.openjax.cdm;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 import org.openjax.cdm.lexer.Lexer;
@@ -67,7 +66,7 @@ public class Audit {
   }
 
   public final char[] chars;
-  public final List<Index> indices = new ArrayList<>();
+  public final ArrayList<Index> indices = new ArrayList<>();
   private final Scope scope = new Scope();
 
   public Audit(final char[] chars) {
@@ -83,11 +82,13 @@ public class Audit {
   @Override
   public String toString() {
     final StringBuilder builder = new StringBuilder();
-    for (final Index index : indices)
+    for (int i = 0, len = indices.size(); i < len; ++i) { // [RA]
+      final Index index = indices.get(i);
       if (index.token instanceof Delimiter)
         builder.append(((Delimiter)index.token).ch);
       else
         builder.append(chars, index.start, index.length);
+    }
 
     return builder.toString();
   }
