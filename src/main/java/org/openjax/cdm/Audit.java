@@ -82,7 +82,7 @@ public class Audit {
   @Override
   public String toString() {
     final StringBuilder builder = new StringBuilder();
-    for (int i = 0, len = indices.size(); i < len; ++i) { // [RA]
+    for (int i = 0, i$ = indices.size(); i < i$; ++i) { // [RA]
       final Index index = indices.get(i);
       if (index.token instanceof Delimiter)
         builder.append(((Delimiter)index.token).ch);
