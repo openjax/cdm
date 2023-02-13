@@ -64,6 +64,11 @@
       <version>0.9.0-SNAPSHOT</version>
     </dependency>
     <dependency>
+      <groupId>org.libj</groupId>
+      <artifactId>io</artifactId>
+      <version>0.7.8-SNAPSHOT</version>
+    </dependency>
+    <dependency>
       <groupId>org.openjax.codegen</groupId>
       <artifactId>radixtree</artifactId>
       <version>0.2.6-SNAPSHOT</version>

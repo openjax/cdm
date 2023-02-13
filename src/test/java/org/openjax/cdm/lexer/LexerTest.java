@@ -20,17 +20,17 @@ import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.StringReader;
 import java.nio.file.Files;
 
 import org.junit.Test;
+import org.libj.io.UnsynchronizedStringReader;
 import org.openjax.cdm.Audit;
 
 public class LexerTest {
   @Test
   public void testListener() throws IOException {
     final String source = "/* Test class */\r// With a comment\npackage " + getClass().getPackage().getName() + ";\npublic class StringTest implements com.logicbig.example.ITest{" + "public void doSomething(){" + "System.out.println(\"testing\");}}";
-    final Audit audit = Lexer.tokenize(new StringReader(source), source.length(), new Lexer.Token.Listener() {
+    final Audit audit = Lexer.tokenize(new UnsynchronizedStringReader(source), source.length(), new Lexer.Token.Listener() {
       private boolean packageFound = false;
       private int start = -1;
 
