@@ -423,7 +423,8 @@ public final class Lexer {
         if (token == Delimiter.SLASH) { // Start of line comment
           // find end of line
           // index from // to end of comment, not including newline
-          // this is the only situation where the token is added at time of detection of end of block, cause the eol char is not supposed to be a part of the
+          // this is the only situation where the token is added at time of detection of end of block, cause the eol char is not supposed to
+          // be a part of the
           // token
           len = eol.search(in, chars, i);
           audit.push(Span.LINE_COMMENT, i - 2, len + 2);
